@@ -1,0 +1,80 @@
+@import 'config';
+
+#contact{
+    h1, h2{
+        text-align: center;
+    }
+    span{
+        color: $secondary_color;
+    }
+}
+
+.contact_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    .mail_image{
+        width: 600px;
+        height: 600px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .2);
+            z-index: 1;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .mail_form{
+        width: 600px;
+        height: 600px;
+        padding: 20px;
+        color: #fff;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $secondary_color;
+        
+        label{
+            font-weight: 500;
+        }
+        input{
+            display: block;
+            width: 400px;
+            padding-left: 15px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid $secondary_color;
+            margin-bottom: 1.5rem;
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+        textarea{
+            width: 100%;
+            margin-top: 5px;
+            border-radius: 3px;
+            border: 1px solid $secondary_color;
+            padding: 10px;
+            font-size: 1.3rem;
+            font-style: italic;
+            outline: none;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            margin-top: 5px;
+            @include submit-btn();
+        }
+    }
+}

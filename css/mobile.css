@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #e8676b;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+  color: #fff; }
+  h1.lg_heading, h2.lg_heading, h3.lg_heading {
+    font-size: 4rem;
+    padding-top: 50px; }
+  h1.sm_heading, h2.sm_heading, h3.sm_heading {
+    font-size: 1.2rem; }
+  h1 span, h2 span, h3 span {
+    color: #e8676b; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none; }
+
+input {
+  outline: none; }
+
+@media screen and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (max-width: 1000px) {
+  .about_info {
+    grid-template-areas: 'bio bio bio' 'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr); }
+  .bio_image {
+    display: none; }
+  .projects {
+    grid-template-columns: repeat(3, 1fr); }
+  .mail_image {
+    display: none; }
+  .menu_btn:before {
+    content: '';
+    position: absolute;
+    background: #444;
+    height: 55px;
+    width: 55px;
+    z-index: -1;
+    border-radius: .3rem; } }
+
+@media screen and (max-width: 901px) {
+  .main_nav {
+    display: none; }
+  .my_interests {
+    top: .4rem !important; }
+  .home_background {
+    display: none; }
+  .short_info {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important; }
+  .info_wraper {
+    margin-top: 100px;
+    flex-direction: column !important;
+    text-align: center; }
+  .info_image {
+    margin-top: 350px;
+    width: 100% !important;
+    padding: 2rem;
+    position: relative; }
+    .info_image::after {
+      content: 'Download My CV';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #444;
+      color: #e8676b;
+      outline: none;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 3px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid #e8676b;
+      transition: all .5s ease-in-out;
+      z-index: 3;
+      opacity: 0; }
+    .info_image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      transition: all .5s ease-in-out;
+      cursor: pointer; }
+    .info_image:hover::before {
+      width: 100% !important; }
+    .info_image:hover::after {
+      opacity: 1; }
+    .info_image img {
+      padding: 0 !important;
+      border: 2px solid #d3d3d3;
+      border-radius: 2rem;
+      cursor: pointer; }
+  .info {
+    width: 100% !important;
+    padding-bottom: 50px !important;
+    box-sizing: border-box; }
+    .info .info_body_media500 {
+      width: 100%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .info .info_body_media500 span {
+        padding: 10px;
+        color: #d3d3d3;
+        font-weight: 500;
+        font-size: 1.2rem; }
+      .info .info_body_media500 p {
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 700; }
+  .info_head h3 {
+    font-size: 2.8rem !important; }
+    .info_head h3 span {
+      font-weight: 700;
+      color: #e8676b; }
+  .info_head h5 {
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0; }
+  .info_body {
+    padding: 0;
+    width: 100% !important;
+    justify-content: center; }
+  .info_body_right {
+    display: none; }
+  .info_body_left {
+    display: none; }
+  .icons {
+    width: auto !important; }
+    .icons a {
+      margin: 2rem !important;
+      padding: 0 !important; }
+  .download {
+    display: none; }
+  .menu {
+    display: block !important;
+    height: 100%; }
+  .menu_branding {
+    width: 100% !important;
+    height: 30% !important; }
+  .menu_nav {
+    width: 100% !important;
+    height: 70% !important; } }
+
+@media screen and (max-width: 768px) {
+  .about_info {
+    grid-template-areas: 'bio' 'job1' 'job2'  'job3';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 550px) {
+  .projects {
+    grid-template-columns: 1fr; }
+  #work h1, #work h2, #about h1, #about h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+  #work h1, #about h1 {
+    padding-top: 3rem; }
+  .mail_form {
+    padding: 1rem; }
+    .mail_form input {
+      width: 100% !important; } }
+
+@media screen and (max-width: 476px) {
+  .info_head h3 {
+    font-size: 1.8rem !important; }
+  .info_head h5 {
+    font-size: 1.2rem; }
+  .info_body_media500 span {
+    font-size: .9rem !important; }
+  .info_body_media500 p {
+    font-size: .9rem !important;
+    color: #fff;
+    font-weight: 700; }
+  .icons a {
+    margin: 1rem !important; } }

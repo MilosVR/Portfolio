@@ -1,0 +1,71 @@
+$primary-color : #444;
+$secondary-color : #e8676b;
+$home-image: url(/assets/portfolio_image.jpg);
+
+
+@mixin easeOut {
+    transition: all .5s ease-in-out;
+}
+@mixin submit-btn{
+    padding: .75rem 2rem;
+    color: #fff;
+    background: $secondary_color;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer;
+    @include easeOut();
+    &:hover{
+        background: darken($secondary_color, 5);
+        @include easeOut();
+    }
+}
+
+@mixin  boxShadow {
+    box-shadow: 0px 8px 17px -5px rgba(0,0,0,0.75);
+}
+
+* {
+  box-sizing: border-box;  
+}
+body {
+    background: $primary-color;
+    color: $secondary-color;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1, h2, h3{
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+
+    &.lg_heading{
+        font-size: 4rem;
+        padding-top: 50px;
+
+    }
+    &.sm_heading{
+        font-size: 1.2rem;
+    }
+    span{
+        color: $secondary-color;
+    }
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+button{
+    outline: none;
+    border: none;
+}
+input{
+    outline: none;
+}

@@ -1,0 +1,452 @@
+@import 'config';
+
+
+@mixin easeOut {
+    transition: all .5s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;  
+}
+body {
+    background: $primary-color;
+    color: $secondary-color;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1, h2, h3{
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+
+    &.lg_heading{
+        font-size: 4rem;
+    }
+    &.sm_heading{
+        font-size: 2rem;
+    }
+    span{
+        color: $secondary-color;
+    }
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .menu{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        visibility: hidden;
+          .menu_branding{
+            position: relative;
+            width: 50%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform : translate3d(0px, -100%, 0px);
+            flex-direction: column;
+            @include easeOut();
+            position: relative;
+            &.show_overlay{
+                transform : translate3d(0px, 0px, 0px);
+                @include easeOut();
+                .skills {
+                    @include easeOut();
+                    transition-delay: 1s;
+                    transform : translate3d(0px, 0px, 0px);
+                }
+            }
+            
+            .portrait{
+                width: 250px;
+                height: 250px;
+                background: url(/assets/profile_image.jpg)center center no-repeat ;
+                background-size: cover;
+                border-radius: 50%;
+                @include easeOut();
+                margin: 1rem;
+            }
+            .skills {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,.5);
+                z-index: -1;
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                transform : translate3d(-850px, 0px, 0px);
+                padding: 4rem;
+                @include easeOut();
+                ul{
+                    padding-top: 50px;
+                }
+                li {
+                    margin: .5rem;
+                    text-align: center;
+                    background: rgba($secondary-color, .5);
+                    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                }
+                a {
+                    color: #fff;
+                    font-weight: 500;
+                    padding: .2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                i {
+                    margin-right: 0.2rem;
+                }
+            }
+            .branding_name{
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                background: rgba($secondary-color, .3);
+                padding: 2rem 1rem;
+                margin-top: 1.7rem;
+                color: white;
+            }
+        }
+          .menu_nav{
+              width: 50%;
+              height: 100vh;
+              background: rgba(0, 0, 0, 0.8);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              flex-direction: column;
+              @include easeOut();
+              transform : translate3d(0px, 100%, 0px);
+
+              &.show_overlay{
+                transform : translate3d(0px, 0px, 0px);
+                display: flex;
+                @include easeOut();
+                li{
+                    transform : translate3d(0px, 0px, 0px);
+                    transition: all 1s ease-in-out;
+                    &:nth-child(1){
+                        transition-delay: .1s;
+                    }
+                    &:nth-child(2){
+                        transition-delay: .2s;
+                    }
+                    &:nth-child(3){
+                        transition-delay: .3s;
+                    }
+                    &:nth-child(4){
+                        transition-delay: .4s;
+                    }
+                }
+            }
+              
+              li{
+                margin: 1.2rem;
+                transform : translate3d(600px, 0px, 0px);
+              }
+              a{
+                color: $secondary-color; 
+                color: #fff;
+                padding: .75rem 2rem;
+                font-size: 2rem;
+                font-weight: 300;
+                
+
+                &:hover{
+                    color: $secondary-color;
+                    @include easeOut();
+                    background: #fff;
+                    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+                    padding: 1.2rem 4rem 1.2rem 1.2rem;
+                }
+              }
+              
+          }  
+    }
+    .main_nav{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        color: #fff;
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            padding: 1rem 5rem;
+            @include boxShadow();
+        }
+        li{
+            width: 100%;
+            margin: .8rem;
+            background: transparent;
+        }
+        a{
+            padding: .8rem 1.5rem;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            background: rgba(#444, .9);
+            border-radius: 3px;
+            color: $secondary-color;
+            font-weight: 600;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 0;
+                left: 0;
+                bottom: -5px;
+                height: 4px;
+                background: #000;
+                transition: width .3s;
+                background: $secondary-color;
+            }
+            &:hover{
+                @include easeOut();
+                
+            }
+            &:hover:after{
+                @include easeOut();
+                width: 100%;
+            }
+        }
+    }
+    .my_interests{
+        position: absolute;
+            top: 8rem;
+            left: 0;
+            display: flex;
+            transform : translate3d(-16rem, 0px, 0px);
+            transition: all .8s ease-in-out;
+            &.show_interest_menu{
+                transform : translate3d( 0px, 0px, 0px);
+                transition: all 2s ease-in-out;
+            }
+        .my_interests_menu{
+            background: $secondary-color;
+            color: $primary-color;
+            padding: 1rem;
+            width: 16rem;
+            @include boxShadow();
+            li{
+                display: flex;
+                align-items: center;
+                border-bottom: 2px dotted $primary-color;
+                margin: 1rem;
+                padding: 2px;
+                i{
+                    color: $primary-color;
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .my_interests_btn{
+            width: 60px;
+            height:60px;
+            color: $primary-color;
+            @include boxShadow();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background: $secondary-color;
+            transition: background .5s ease-in-out;       }
+    }
+    
+    .menu_btn{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 10;
+        
+        .btn_line{
+            width: 100%;
+            height: 5px;
+            margin: .2rem;
+            background: $secondary-color;
+            @include easeOut();
+        }
+        &.show_overlay {
+            .btn_line:nth-child(1){
+                transform: rotate(45deg);
+                margin-right: -2px;
+                margin-top: 0px;
+                @include easeOut();
+            }
+            .btn_line:nth-child(2){
+                display: none;
+                @include easeOut();
+            }
+            .btn_line:nth-child(3){
+                transform: rotate(-45deg);
+                margin-right: -3px;
+                margin-top: -9px;
+                @include easeOut();
+            }
+        }
+    }
+}
+main{
+    height: 100vh;
+    
+    &#home{
+        background: #444;
+        
+        .home_background{
+            background: url(/assets/portfolio1.jpg) center center fixed no-repeat/cover;
+            width: 100%;
+            height: 60vh;
+            box-shadow: 0px 8px 17px -5px rgba(0,0,0,0.75);
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba($primary-color, .7);
+            }
+        }
+        .short_info{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            background: $primary-color;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+            display: flex;
+            flex-direction: column;
+            
+            .info_wraper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                width: auto;
+                flex-wrap: wrap;
+            }
+            .info_image{
+                width: 40%;
+                height: 430px;
+                align-self: center;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    padding: 2rem;
+                }
+            }
+            .info{
+                width: 60%;
+                padding: 2rem;
+                .info_body_media500{
+                    display: none;
+                }
+                .info_head{
+                    padding-bottom: 30px;
+                    border-bottom: 2px dotted $secondary-color;
+                    h3{
+                        font-size: 1.8rem;
+                        span{
+                            font-weight: 700;
+                            color: $secondary-color;
+                        }
+                    }
+                    h5{
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                .info_body{
+                    padding-top: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    .info_body_left{
+                        font-weight: 700;
+                        text-align: left;
+                    }
+                    .info_body_right{
+                        color: #d3d3d3;
+                        font-weight: 500;
+                        padding-right:5rem
+                    }
+                }
+            }
+            .icons{
+                height: 70px;
+                background:#e8676b;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                
+                @include easeOut();
+                a{
+                    margin: .75rem;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+                a {
+                    margin: 40px;
+                    &:hover{
+                        background: rgba(0, 0, 0, .5);
+                        @include easeOut();
+                        cursor: pointer;
+                    }
+                }
+            }
+            h3 {
+                color: #fff;
+            }
+        }
+    }
+}
+.download{
+    display: block;
+    position: relative;
+    top: 150px;
+    background: $primary-color;
+    color: $secondary-color;
+    display: block;
+    margin: 4rem auto;
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid $secondary-color;
+    @include easeOut();
+    &:hover{
+        background: $secondary-color;
+        @include easeOut();
+        color: $primary-color;
+    }
+}

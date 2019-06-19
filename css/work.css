@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #e8676b;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+  color: #fff; }
+  h1.lg_heading, h2.lg_heading, h3.lg_heading {
+    font-size: 4rem;
+    padding-top: 50px; }
+  h1.sm_heading, h2.sm_heading, h3.sm_heading {
+    font-size: 1.2rem; }
+  h1 span, h2 span, h3 span {
+    color: #e8676b; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none; }
+
+input {
+  outline: none; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 30px;
+  margin-top: 2rem;
+  padding: 3rem; }
+  .projects .project_item {
+    display: flex;
+    flex-direction: column; }
+    .projects .project_item .project_image {
+      overflow: hidden;
+      border: 4px solid #fff;
+      height: 100%; }
+    .projects .project_item img {
+      width: 100%;
+      margin-bottom: -6px; }
+      .projects .project_item img:hover {
+        transform: scale(1.2);
+        transition: all .5s ease-in-out;
+        cursor: pointer; }
+  .projects a:nth-child(2) {
+    background: #777777;
+    cursor: pointer;
+    padding: 8px;
+    color: #111111;
+    font-weight: 500; }
+    .projects a:nth-child(2) i {
+      margin-right: 10px;
+      color: #111111; }
+  .projects a:nth-child(3) {
+    background: #111111;
+    cursor: pointer;
+    padding: 8px;
+    font-weight: 500; }
+    .projects a:nth-child(3) i {
+      margin-right: 10px; }
+
+#work h1 {
+  padding-left: 3rem; }
+
+#work h2 {
+  padding-left: 3rem;
+  font-size: 1.8rem; }

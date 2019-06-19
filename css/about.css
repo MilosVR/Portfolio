@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #e8676b;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+  color: #fff; }
+  h1.lg_heading, h2.lg_heading, h3.lg_heading {
+    font-size: 4rem;
+    padding-top: 50px; }
+  h1.sm_heading, h2.sm_heading, h3.sm_heading {
+    font-size: 1.2rem; }
+  h1 span, h2 span, h3 span {
+    color: #e8676b; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none; }
+
+input {
+  outline: none; }
+
+#about h1, #about h2 {
+  padding-left: 4rem; }
+
+#about span {
+  color: #e8676b; }
+
+.about_info {
+  display: grid;
+  grid-template-areas: 'image bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  grid-gap: 30px;
+  padding: 50px; }
+  .about_info .bio {
+    grid-area: bio;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: justify; }
+    .about_info .bio h3 {
+      border-bottom: 2px solid #e8676b;
+      text-align: left; }
+  .about_info .bio_image {
+    grid-area: image;
+    width: 240px;
+    height: 240px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover; }
+  .about_info .job_1 {
+    grid-area: job1; }
+  .about_info .job_2 {
+    grid-area: job2; }
+  .about_info .job_3 {
+    grid-area: job3; }
+  .about_info .job {
+    color: #fff;
+    box-shadow: 0px 20px 28px -16px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    background: #4e4e4e;
+    border-bottom: 4px solid #e8676b;
+    border-radius: 3px;
+    margin-top: 30px; }
+    .about_info .job p {
+      text-align: justify; }
