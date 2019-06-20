@@ -25,7 +25,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, .2);
+            background: rgba(0, 0, 0, .1);
             z-index: 1;
         }
         img{
@@ -34,12 +34,12 @@
             object-fit: cover;
         }
     }
+   
     .mail_form{
         width: 600px;
         height: 600px;
         padding: 20px;
-        color: #fff;
-        background: #fff;
+        background: lighten($primary_color, 15) !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,6 +48,7 @@
         
         label{
             font-weight: 500;
+            color: #d3d3d3;
         }
         input{
             display: block;
@@ -55,7 +56,7 @@
             padding-left: 15px;
             padding: 10px;
             border-radius: 3px;
-            border: 1px solid $secondary_color;
+            border: none;
             margin-bottom: 1.5rem;
             margin-top: 5px;
             font-size: 1rem;
@@ -64,7 +65,7 @@
             width: 100%;
             margin-top: 5px;
             border-radius: 3px;
-            border: 1px solid $secondary_color;
+            border:none;
             padding: 10px;
             font-size: 1.3rem;
             font-style: italic;
@@ -73,7 +74,7 @@
         button{
             display: block;
             margin: 0 auto;
-            margin-top: 5px;
+            margin-top: 2rem;
             @include submit-btn();
         }
     }

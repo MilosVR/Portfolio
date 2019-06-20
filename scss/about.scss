@@ -44,6 +44,11 @@
         grid-area: education;
         background: lighten($primary-color , 10) !important;
         color: #fff !important;
+        text-align: justify;
+        li{
+            margin: .7rem;
+            list-style: circle;
+        }
     }
     .job_2{
         grid-area: job2;

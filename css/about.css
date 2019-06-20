@@ -71,7 +71,11 @@ input {
   .about_info .education {
     grid-area: education;
     background: #5e5e5e !important;
-    color: #fff !important; }
+    color: #fff !important;
+    text-align: justify; }
+    .about_info .education li {
+      margin: .7rem;
+      list-style: circle; }
   .about_info .job_2 {
     grid-area: job2; }
     .about_info .job_2 p {

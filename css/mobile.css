@@ -197,9 +197,13 @@ input {
   .mail_form {
     margin-top: 50px;
     width: 100%;
-    padding: 1rem; }
+    padding: 1rem;
+    background: #6a6a6a !important; }
     .mail_form input {
-      width: 100% !important; }
+      width: 100% !important;
+      border: none !important; }
+    .mail_form textarea {
+      border: none !important; }
   #about .lg_heading, #work .lg_heading, #contact .lg_heading {
     font-size: 2rem !important; }
   #about .sm_heading, #work .sm_heading, #contact .sm_heading {

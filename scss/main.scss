@@ -171,9 +171,6 @@ header{
                 &:hover{
                     color: $secondary-color;
                     @include easeOut();
-                    background: #fff;
-                    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-                    padding: 1.2rem 4rem 1.2rem 1.2rem;
                 }
               }
               

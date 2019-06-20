@@ -177,10 +177,7 @@ header {
         font-weight: 300; }
         header .menu .menu_nav a:hover {
           color: #e8676b;
-          transition: all .5s ease-in-out;
-          background: #fff;
-          clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-          padding: 1.2rem 4rem 1.2rem 1.2rem; }
+          transition: all .5s ease-in-out; }
   header .main_nav {
     position: absolute;
     top: 0;

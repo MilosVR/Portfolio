@@ -220,8 +220,13 @@
         margin-top: 50px;
         width: 100%;
         padding: 1rem;
+        background: lighten($primary_color, 15) !important;
         input{
             width: 100% !important;
+            border: none !important;
+        }
+        textarea{
+            border: none !important;
         }
     }
     #about, #work, #contact{
