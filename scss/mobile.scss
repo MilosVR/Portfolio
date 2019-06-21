@@ -184,6 +184,7 @@
         width: 100% !important;
         height: 70% !important;
     }
+    
 }
 @media screen and (max-width: 768px) {
     .about_info{
@@ -253,6 +254,12 @@
             font-weight: 700;
         }
     }
+    .skills {
+        clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%) !important;
+    }
+    .menu_branding{
+        background: rgba(0, 0, 0, .9) !important;
+    }
 }
 @media screen and (max-width: 476px){
     .info_head{
@@ -278,5 +285,4 @@
             margin: 1rem !important;
         }
     }
-    
 }

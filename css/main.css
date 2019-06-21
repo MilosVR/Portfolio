@@ -112,7 +112,7 @@ header {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.9);
         z-index: -1;
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         transform: translate3d(-850px, 0px, 0px);
@@ -379,6 +379,8 @@ main {
             cursor: pointer; }
       main#home .short_info h3 {
         color: #fff; }
+    main#home .skills_collapse {
+      display: none; }
 
 .download {
   display: block;
