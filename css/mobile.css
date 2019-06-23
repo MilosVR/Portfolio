@@ -240,4 +240,6 @@ input {
     color: #fff;
     font-weight: 700; }
   .icons a {
-    margin: 1rem !important; } }
+    margin: 1rem !important; }
+  .portrait {
+    width: 50% !important; } }
