@@ -223,7 +223,10 @@ input {
   .skills {
     clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%) !important; }
   .menu_branding {
-    background: rgba(0, 0, 0, 0.9) !important; } }
+    background: rgba(0, 0, 0, 0.9) !important; }
+  .portrait {
+    border-radius: 0 !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important; } }
 
 @media screen and (max-width: 476px) {
   .info_head h3 {
