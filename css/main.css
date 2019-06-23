@@ -103,7 +103,7 @@ header {
       header .menu .menu_branding .portrait {
         width: 250px;
         height: 250px;
-        background: url(/assets/profile_image.jpg) center center no-repeat;
+        background: url(/assets/portfolio_image.jpg) center center no-repeat;
         background-size: cover;
         border-radius: 50%;
         transition: all .5s ease-in-out;
@@ -326,12 +326,15 @@ main {
         width: 40%;
         height: 430px;
         align-self: center;
-        overflow: hidden; }
+        overflow: hidden;
+        box-shadow: 0px 8px 17px -5px rgba(0, 0, 0, 0.75);
+        padding: 2rem; }
         main#home .short_info .info_image img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          padding: 2rem; }
+          box-shadow: 0px 8px 17px -5px rgba(0, 0, 0, 0.75);
+          border-radius: 5px; }
       main#home .short_info .info {
         width: 60%;
         padding: 2rem; }
