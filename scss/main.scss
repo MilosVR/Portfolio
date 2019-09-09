@@ -192,13 +192,15 @@ header{
             @include boxShadow();
         }
         li{
-            width: 100%;
+          
             margin: .8rem;
             background: transparent;
+            padding: .8rem 1rem;
         }
         a{
-            padding: .8rem 1.5rem;
-            width: 100%;
+            padding-bottom: .5rem;
+            padding: 1rem;
+           
             overflow: hidden;
             text-align: center;
             position: relative;
